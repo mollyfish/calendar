@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Calendar</title>
+<!-- CSS
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<link type="text/css" href="css/reset.css" rel="stylesheet"/>
+<link type="text/css" href="css/app.css" rel="stylesheet"/>
+<link rel="stylesheet" type="text/css" href="css/print.css" media="print">
+<!-- JAVASCRIPT
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<script src="js/deps/jquery.js"></script>
+<script src="js/app.js"></script>
+</head>
+<!-- CONTENT
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<body>
+ <section class="month">
+  <h1 id="month-name">Month</h1>
+  <section class="week firstweek">
+    <section class="day monday">
+      <span class="date" id="0">0</span>
+      <span class="swim">Swim <span class="distance"></span> yds<span class="checkbox"></span></span>
+      <span class="bike">Bike <span class="distance"></span> mi<span class="checkbox"></span></span>
+      <span class="run">Run <span class="distance"></span> mi<span class="checkbox"></span></span>
+      <span class="xtrain">Gym: <span class="focus"></span><span class="checkbox"></span></span>
+    </section>
+    <section class="day">
+      <span class="date" id="1">1</span>
+      <span class="swim">Swim <span class="distance"></span> yds<span class="checkbox"></span></span>
+      <span class="bike">Bike <span class="distance"></span> mi<span class="checkbox"></span></span>
+      <span class="run">Run <span class="distance"></span> mi<span class="checkbox"></span></span>
+      <span class="xtrain">Gym: <span class="focus"></span><span class="checkbox"></span></span>
+    </section>
+    <section class="day">
+      <span class="date" id="2">2</span>
+      <span class="swim">Swim <span class="distance"></span> yds<span class="checkbox"></span></span>
+      <span class="bike">Bike <span class="distance"></span> mi<span class="checkbox"></span></span>
+      <span class="run">Run <span class="distance"></span> mi<span class="checkbox"></span></span>
+      <span class="xtrain">Gym: <span class="focus"></span><span class="checkbox"></span></span>
+    </section>
+    <section class="day">
+      <span class="date" id="3">3</span>
+      <span class="swim">Swim <span class="distance"></span> yds<span class="checkbox"></span></span>
+      <span class="bike">Bike <span class="distance"></span> mi<span class="checkbox"></span></span>
+      <span class="run">Run <span class="distance"></span> mi<span class="checkbox"></span></span>
+      <span class="xtrain">Gym: <span class="focus"></span><span class="checkbox"></span></span>
+    </section>
+    <section class="day">
+      <span class="date" id="4">4</span>
+      <span class="swim">Swim <span class="distance"></span> yds<span class="checkbox"></span></span>
+      <span class="bike">Bike <span class="distance"></span> mi<span class="checkbox"></span></span>
+      <span class="run">Run <span class="distance"></span> mi<span class="checkbox"></span></span>
+      <span class="xtrain">Gym: <span class="focus"></span><span class="checkbox"></span></span>
+    </section>
+    <section class="day">
+      <span class="date" id="5">5</span>
+      <span class="swim">Swim <span class="distance"></span> yds<span class="checkbox"></span></span>
+      <span class="bike">Bike <span class="distance"></span> mi<span class="checkbox"></span></span>
+      <span class="run">Run <span class="distance"></span> mi<span class="checkbox"></span></span>
+      <span class="xtrain">Gym: <span class="focus"></span><span class="checkbox"></span></span>
+    </section>
+    <section class="day sunday">
+      <span class="date" id="6">6</span>
+      <span class="swim">Swim <span class="distance"></span> yds<span class="checkbox"></span></span>
+      <span class="bike">Bike <span class="distance"></span> mi<span class="checkbox"></span></span>
+      <span class="run">Run <span class="distance"></span> mi<span class="checkbox"></span></span>
+      <span class="xtrain">Gym: <span class="focus"></span><span class="checkbox"></span></span>
+    </section>
+  </section>
+  <section class="week">
+    <section class="day monday">
+      <span class="date" id="7">7</span>
+      <span class="swim">Swim <span class="distance"></span> yds<span class="checkbox"></span></span>
+      <span class="bike">Bike <span class="distance"></span> mi<span class="checkbox"></span></span>
+      <span class="run">Run <span class="distance"></span> mi<span class="checkbox"></span></span>
+      <span class="xtrain">Gym: <span class="focus"></span><span class="checkbox"></span></span>
+    </section>
+    <section class="day">
+      <span class="date" id="8">8</span>
+      <span class="swim">Swim <span class="distance"></span> yds<span class="checkbox"></span></span>
+      <span class="bike">Bike <span class="distance"></span> mi<span class="checkbox"></span></span>
+      <span class="run">Run <span class="distance"></span> mi<span class="checkbox"></span></span>
+      <span class="xtrain">Gym: <span class="focus"></span><span class="checkbox"></span></span>
+    </section>
+    <section class="day">
+      <span class="date" id="9">9</span>
+      <span class="swim">Swim <span class="distance"></span> yds<span class="checkbox"></span></span>
+      <span class="bike">Bike <span class="distance"></span> mi<span class="checkbox"></span></span>
+      <span class="run">Run <span class="distance"></span> mi<span class="checkbox"></span></span>
+      <span class="xtrain">Gym: <span class="focus"></span><span class="checkbox"></span></span>
+    </section>
+    <section class="day">
+      <span class="date" id="10">10</span>
+      <span class="swim">Swim <span class="distance"></span> yds<span class="checkbox"></span></span>
+      <span class="bike">Bike <span class="distance"></span> mi<span class="checkbox"></span></span>
+      <span class="run">Run <span class="distance"></span> mi<span class="checkbox"></span></span>
+      <span class="xtrain">Gym: <span class="focus"></span><span class="checkbox"></span></span>
+    </section>
+    <section class="day">
+      <span class="date" id="11">11</span>
+      <span class="swim">Swim <span class="distance"></span> yds<span class="checkbox"></span></span>
+      <span class="bike">Bike <span class="distance"></span> mi<span class="checkbox"></span></span>
+      <span class="run">Run <span class="distance"></span> mi<span class="checkbox"></span></span>
+      <span class="xtrain">Gym: <span class="focus"></span><span class="checkbox"></span></span>
+    </section>
+    <section class="day">
+      <span class="date" id="12">12</span>
+      <span class="swim">Swim <span class="distance"></span> yds<span class="checkbox"></span></span>
+      <span class="bike">Bike <span class="distance"></span> mi<span class="checkbox"></span></span>
+      <span class="run">Run <span class="distance"></span> mi<span class="checkbox"></span></span>
+      <span class="xtrain">Gym: <span class="focus"></span><span class="checkbox"></span></span>
+    </section>
+    <section class="day sunday">
+      <span class="date" id="13">13</span>
+      <span class="swim">Swim <span class="distance"></span> yds<span class="checkbox"></span></span>
+      <span class="bike">Bike <span class="distance"></span> mi<span class="checkbox"></span></span>
+      <span class="run">Run <span class="distance"></span> mi<span class="checkbox"></span></span>
+      <span class="xtrain">Gym: <span class="focus"></span><span class="checkbox"></span></span>
+    </section>
+  </section>
+  <section class="week">
+    <section class="day monday">
+      <span class="date" id="14">14</span>
+      <span class="swim">Swim <span class="distance"></span> yds<span class="checkbox"></span></span>
+      <span class="bike">Bike <span class="distance"></span> mi<span class="checkbox"></span></span>
+      <span class="run">Run <span class="distance"></span> mi<span class="checkbox"></span></span>
+      <span class="xtrain">Gym: <span class="focus"></span><span class="checkbox"></span></span>
+    </section>
+    <section class="day">
+      <span class="date" id="15">15</span>
+      <span class="swim">Swim <span class="distance"></span> yds<span class="checkbox"></span></span>
+      <span class="bike">Bike <span class="distance"></span> mi<span class="checkbox"></span></span>
+      <span class="run">Run <span class="distance"></span> mi<span class="checkbox"></span></span>
+      <span class="xtrain">Gym: <span class="focus"></span><span class="checkbox"></span></span>
+    </section>
+    <section class="day">
+      <span class="date" id="16">16</span>
+      <span class="swim">Swim <span class="distance"></span> yds<span class="checkbox"></span></span>
+      <span class="bike">Bike <span class="distance"></span> mi<span class="checkbox"></span></span>
+      <span class="run">Run <span class="distance"></span> mi<span class="checkbox"></span></span>
+      <span class="xtrain">Gym: <span class="focus"></span><span class="checkbox"></span></span>
+    </section>
+    <section class="day">
+      <span class="date" id="17">17</span>
+      <span class="swim">Swim <span class="distance"></span> yds<span class="checkbox"></span></span>
+      <span class="bike">Bike <span class="distance"></span> mi<span class="checkbox"></span></span>
+      <span class="run">Run <span class="distance"></span> mi<span class="checkbox"></span></span>
+      <span class="xtrain">Gym: <span class="focus"></span><span class="checkbox"></span></span>
+    </section>
+    <section class="day">
+      <span class="date" id="18">18</span>
+      <span class="swim">Swim <span class="distance"></span> yds<span class="checkbox"></span></span>
+      <span class="bike">Bike <span class="distance"></span> mi<span class="checkbox"></span></span>
+      <span class="run">Run <span class="distance"></span> mi<span class="checkbox"></span></span>
+      <span class="xtrain">Gym: <span class="focus"></span><span class="checkbox"></span></span>
+    </section>
+    <section class="day">
+      <span class="date" id="19">19</span>
+      <span class="swim">Swim <span class="distance"></span> yds<span class="checkbox"></span></span>
+      <span class="bike">Bike <span class="distance"></span> mi<span class="checkbox"></span></span>
+      <span class="run">Run <span class="distance"></span> mi<span class="checkbox"></span></span>
+      <span class="xtrain">Gym: <span class="focus"></span><span class="checkbox"></span></span>
+    </section>
+    <section class="day sunday">
+      <span class="date" id="20">20</span>
+      <span class="swim">Swim <span class="distance"></span> yds<span class="checkbox"></span></span>
+      <span class="bike">Bike <span class="distance"></span> mi<span class="checkbox"></span></span>
+      <span class="run">Run <span class="distance"></span> mi<span class="checkbox"></span></span>
+      <span class="xtrain">Gym: <span class="focus"></span><span class="checkbox"></span></span>
+    </section>
+  </section>
+  <section class="week">
+    <section class="day monday">
+      <span class="date" id="21">21</span>
+      <span class="swim">Swim <span class="distance"></span> yds<span class="checkbox"></span></span>
+      <span class="bike">Bike <span class="distance"></span> mi<span class="checkbox"></span></span>
+      <span class="run">Run <span class="distance"></span> mi<span class="checkbox"></span></span>
+      <span class="xtrain">Gym: <span class="focus"></span><span class="checkbox"></span></span>
+    </section>
+    <section class="day">
+      <span class="date" id="22">22</span>
+      <span class="swim">Swim <span class="distance"></span> yds<span class="checkbox"></span></span>
+      <span class="bike">Bike <span class="distance"></span> mi<span class="checkbox"></span></span>
+      <span class="run">Run <span class="distance"></span> mi<span class="checkbox"></span></span>
+      <span class="xtrain">Gym: <span class="focus"></span><span class="checkbox"></span></span>
+    </section>
+    <section class="day">
+      <span class="date" id="23">23</span>
+      <span class="swim">Swim <span class="distance"></span> yds<span class="checkbox"></span></span>
+      <span class="bike">Bike <span class="distance"></span> mi<span class="checkbox"></span></span>
+      <span class="run">Run <span class="distance"></span> mi<span class="checkbox"></span></span>
+      <span class="xtrain">Gym: <span class="focus"></span><span class="checkbox"></span></span>
+    </section>
+    <section class="day">
+      <span class="date" id="24">24</span>
+      <span class="swim">Swim <span class="distance"></span> yds<span class="checkbox"></span></span>
+      <span class="bike">Bike <span class="distance"></span> mi<span class="checkbox"></span></span>
+      <span class="run">Run <span class="distance"></span> mi<span class="checkbox"></span></span>
+      <span class="xtrain">Gym: <span class="focus"></span><span class="checkbox"></span></span>
+    </section>
+    <section class="day">
+      <span class="date" id="25">25</span>
+      <span class="swim">Swim <span class="distance"></span> yds<span class="checkbox"></span></span>
+      <span class="bike">Bike <span class="distance"></span> mi<span class="checkbox"></span></span>
+      <span class="run">Run <span class="distance"></span> mi<span class="checkbox"></span></span>
+      <span class="xtrain">Gym: <span class="focus"></span><span class="checkbox"></span></span>
+    </section>
+    <section class="day">
+      <span class="date" id="26">26</span>
+      <span class="swim">Swim <span class="distance"></span> yds<span class="checkbox"></span></span>
+      <span class="bike">Bike <span class="distance"></span> mi<span class="checkbox"></span></span>
+      <span class="run">Run <span class="distance"></span> mi<span class="checkbox"></span></span>
+      <span class="xtrain">Gym: <span class="focus"></span><span class="checkbox"></span></span>
+    </section>
+    <section class="day sunday">
+      <span class="date" id="27">27</span>
+      <span class="swim">Swim <span class="distance"></span> yds<span class="checkbox"></span></span>
+      <span class="bike">Bike <span class="distance"></span> mi<span class="checkbox"></span></span>
+      <span class="run">Run <span class="distance"></span> mi<span class="checkbox"></span></span>
+      <span class="xtrain">Gym: <span class="focus"></span><span class="checkbox"></span></span>
+    </section>
+  </section>
+  <section class="week">
+    <section class="day monday">
+      <span class="date" id="28">28</span>
+      <span class="swim">Swim <span class="distance"></span> yds<span class="checkbox"></span></span>
+      <span class="bike">Bike <span class="distance"></span> mi<span class="checkbox"></span></span>
+      <span class="run">Run <span class="distance"></span> mi<span class="checkbox"></span></span>
+      <span class="xtrain">Gym: <span class="focus"></span><span class="checkbox"></span></span>
+    </section>
+    <section class="day">
+      <span class="date" id="29">29</span>
+      <span class="swim">Swim <span class="distance"></span> yds<span class="checkbox"></span></span>
+      <span class="bike">Bike <span class="distance"></span> mi<span class="checkbox"></span></span>
+      <span class="run">Run <span class="distance"></span> mi<span class="checkbox"></span></span>
+      <span class="xtrain">Gym: <span class="focus"></span><span class="checkbox"></span></span>
+    </section>
+    <section class="day">
+      <span class="date" id="30">30</span>
+      <span class="swim">Swim <span class="distance"></span> yds<span class="checkbox"></span></span>
+      <span class="bike">Bike <span class="distance"></span> mi<span class="checkbox"></span></span>
+      <span class="run">Run <span class="distance"></span> mi<span class="checkbox"></span></span>
+      <span class="xtrain">Gym: <span class="focus"></span><span class="checkbox"></span></span>
+    </section>
+    <section class="day">
+      <span class="date" id="31">31</span>
+      <span class="swim">Swim <span class="distance"></span> yds<span class="checkbox"></span></span>
+      <span class="bike">Bike <span class="distance"></span> mi<span class="checkbox"></span></span>
+      <span class="run">Run <span class="distance"></span> mi<span class="checkbox"></span></span>
+      <span class="xtrain">Gym: <span class="focus"></span><span class="checkbox"></span></span>
+    </section>
+    <section class="day">
+      <span class="date" id="32">32</span>
+      <span class="swim">Swim <span class="distance"></span> yds<span class="checkbox"></span></span>
+      <span class="bike">Bike <span class="distance"></span> mi<span class="checkbox"></span></span>
+      <span class="run">Run <span class="distance"></span> mi<span class="checkbox"></span></span>
+      <span class="xtrain">Gym: <span class="focus"></span><span class="checkbox"></span></span>
+    </section>
+    <section class="day">
+      <span class="date" id="33">33</span>
+      <span class="swim">Swim <span class="distance"></span> yds<span class="checkbox"></span></span>
+      <span class="bike">Bike <span class="distance"></span> mi<span class="checkbox"></span></span>
+      <span class="run">Run <span class="distance"></span> mi<span class="checkbox"></span></span>
+      <span class="xtrain">Gym: <span class="focus"></span><span class="checkbox"></span></span>
+    </section>
+    <section class="day sunday">
+      <span class="date" id="34">34</span>
+      <span class="swim">Swim <span class="distance"></span> yds<span class="checkbox"></span></span>
+      <span class="bike">Bike <span class="distance"></span> mi<span class="checkbox"></span></span>
+      <span class="run">Run <span class="distance"></span> mi<span class="checkbox"></span></span>
+      <span class="xtrain">Gym: <span class="focus"></span><span class="checkbox"></span></span>
+    </section>
+  </section>
+  <section class="week">
+    <section class="day monday">
+      <span class="date" id="35">35</span>
+      <span class="swim">Swim <span class="distance"></span> yds<span class="checkbox"></span></span>
+      <span class="bike">Bike <span class="distance"></span> mi<span class="checkbox"></span></span>
+      <span class="run">Run <span class="distance"></span> mi<span class="checkbox"></span></span>
+      <span class="xtrain">Gym: <span class="focus"></span><span class="checkbox"></span></span>
+    </section>
+    <section class="day">
+      <span class="date" id="36">36</span>
+      <span class="swim">Swim <span class="distance"></span> yds<span class="checkbox"></span></span>
+      <span class="bike">Bike <span class="distance"></span> mi<span class="checkbox"></span></span>
+      <span class="run">Run <span class="distance"></span> mi<span class="checkbox"></span></span>
+      <span class="xtrain">Gym: <span class="focus"></span><span class="checkbox"></span></span>
+    </section>
+    <section class="day">
+      <span class="date" id="37">37</span>
+      <span class="swim">Swim <span class="distance"></span> yds<span class="checkbox"></span></span>
+      <span class="bike">Bike <span class="distance"></span> mi<span class="checkbox"></span></span>
+      <span class="run">Run <span class="distance"></span> mi<span class="checkbox"></span></span>
+      <span class="xtrain">Gym: <span class="focus"></span><span class="checkbox"></span></span>
+    </section>
+    <section class="day">
+      <span class="date" id="38">38</span>
+      <span class="swim">Swim <span class="distance"></span> yds<span class="checkbox"></span></span>
+      <span class="bike">Bike <span class="distance"></span> mi<span class="checkbox"></span></span>
+      <span class="run">Run <span class="distance"></span> mi<span class="checkbox"></span></span>
+      <span class="xtrain">Gym: <span class="focus"></span><span class="checkbox"></span></span>
+    </section>
+    <section class="day">
+      <span class="date" id="39">39</span>
+      <span class="swim">Swim <span class="distance"></span> yds<span class="checkbox"></span></span>
+      <span class="bike">Bike <span class="distance"></span> mi<span class="checkbox"></span></span>
+      <span class="run">Run <span class="distance"></span> mi<span class="checkbox"></span></span>
+      <span class="xtrain">Gym: <span class="focus"></span><span class="checkbox"></span></span>
+    </section>
+    <section class="day">
+      <span class="date" id="40">40</span>
+      <span class="swim">Swim <span class="distance"></span> yds<span class="checkbox"></span></span>
+      <span class="bike">Bike <span class="distance"></span> mi<span class="checkbox"></span></span>
+      <span class="run">Run <span class="distance"></span> mi<span class="checkbox"></span></span>
+      <span class="xtrain">Gym: <span class="focus"></span><span class="checkbox"></span></span>
+    </section>
+    <section class="day sunday">
+      <span class="date" id="41">41</span>
+      <span class="swim">Swim <span class="distance"></span> yds<span class="checkbox"></span></span>
+      <span class="bike">Bike <span class="distance"></span> mi<span class="checkbox"></span></span>
+      <span class="run">Run <span class="distance"></span> mi<span class="checkbox"></span></span>
+      <span class="xtrain">Gym: <span class="focus"></span><span class="checkbox"></span></span>
+    </section>
+  </section>
+ </section>
+</body>
+</html>
+
