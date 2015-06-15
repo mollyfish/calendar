@@ -7,6 +7,15 @@ h1 {
   text-align: center;
   margin: .5em auto;
 }
+span.day-of-week {
+  display: inline;
+  width: 13.5%;
+  float: left;
+  margin-left: .73%;
+  margin-bottom: .2em;
+  text-align: center;
+  font-weight: bold;
+}
 section.month {
   border: 1px solid #000;
   width: 95%;
@@ -77,4 +86,17 @@ span.checkbox {
   background-color: #fff;
   margin-top: 2px;
   margin-right: 2px;
+}
+span.checkbox.checked {
+  background-color: #000;
+  border-color: #000;
+}
+/*span.hideme {
+  display: none;
+}*/
+span.add {
+  font-size: 50%;
+}
+span.add span {
+  margin-left: 2em;
 }
